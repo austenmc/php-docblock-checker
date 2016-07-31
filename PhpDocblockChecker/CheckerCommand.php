@@ -180,7 +180,7 @@ class CheckerCommand extends Command
                 }
             }
 
-            if (!$errors && $this->verbose) {
+            if (!$errors && $this->verbose && $this->output->getVerbosity() >= OutputInterface::VERBOSITY_VERBOSE) {
                 $this->output->writeln($name . ' <info>OK</info>');
             }
         }
